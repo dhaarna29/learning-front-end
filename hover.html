@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hover</title>
+	<style type="text/css">
+	@import url('https://fonts.googleapis.com/css?family=Monoton');
+	body{
+		text-align: center;
+		background: #111;
+	}
+
+	div{
+		color: red;
+		font-size: 80px;
+		font-family: 'Monoton';
+		text-shadow: 0 0 80px red,0 0 30px #b22222,0 0 6px #8b0000;
+	}
+	#no:hover { text-shadow: 0 0 200px #ffffff,0 0 80px #008000,0 0 6px #0000ff; }
+    #vacancy:hover { text-shadow: 0 0 100px red,0 0 40px #b22222,0 0 8px #8b0000; }
+    #no{
+    	color: #fff;
+  		text-shadow: 0 0 80px #ffffff,0 0 30px #008000,0 0 6px #0000ff;
+    }
+	#no span{
+		animation: upper 11s linear infinite; 
+	}
+	#vacancy span:nth-of-type(2){
+		animation: lower 11s linear infinite;
+	}
+	#vacancy span:nth-of-type(1){
+		text-shadow: none;
+		opacity: 0.4;
+	}
+	@keyframes upper{
+		0%,20%,22%,60%,62%,62.9%,70%,100%{
+			opacity: 0.99;
+			text-shadow: 0 0 80px #ffffff,0 0 30px #008000,0 0 6px #0000ff;
+		}
+		20.1%,61%,62.9%,63%{
+			opacity: 0.4;
+			text-shadow: none;
+		}
+	}
+	@keyframes lower{
+		0%,12%, 23%,31%,38%,41%,45%,52%,67%,82%,90%,95%,100%{
+			opacity: 0.99;
+			 text-shadow: 0 0 80px red,0 0 30px #b22222,0 0 6px #8b0000;
+		}
+		10%,11%,20%,30%,37%,40%,50%,65%,80%{
+			opacity: 0.4;
+			text-shadow: none;
+		}
+
+	}
+
+	
+</style>
+</head>
+<body >
+<div>
+	<p id="no"><span>M</span>R.  </p>
+	<p id="vacancy">R <span>O</span>B<span>O</span>T</p>
+</div>
+
+
+
+</body>
+</html>
